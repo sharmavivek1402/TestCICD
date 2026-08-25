@@ -1,0 +1,4 @@
+- name: Build and Test
+  run: fastlane test
+- name: Deploy to TestFlight
+  run: fastlane beta

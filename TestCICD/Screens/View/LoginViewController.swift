@@ -10,7 +10,6 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var textEmail: UITextField!
-
     @IBOutlet weak var textPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +18,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
-        
+        let vc = self.storyboard?.instantiateViewController(
+            withIdentifier: "FAQViewController") as! FAQViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
